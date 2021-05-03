@@ -1,7 +1,10 @@
 function intToString(arr) {
     const conv = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
     out = ''
-
+    if(arr.length == 0) {
+        process.stderr.write("Empty array" + '\n')
+        return
+    }
     for(num of arr){
         if(typeof(num) != "number") {
             process.stderr.write("Error in input" + '\n')
